@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900');
+    @import url('https://fonts.googleapis.com/css?family=Playball');
+    * { margin: 0;
+        padding: 0;
+        box-sizing: border-box;}
+    body {background: #093028;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        overflow-y: scroll;}
+    main {position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); z-index: 1;}
+    main:before {content: 'SEARCH YOUR FAVOURITE MEAL'; font-family: 'Lato', sans-serif; position: absolute; top: -70px; left: 50%; color: rgba(0, 0, 0, 0.8); font-family: cursive; font-size: 26px; font-weight: 700; letter-spacing: 3px; transform: translateX(-50%); white-space: nowrap; pointer-events: none; color: #fff; text-shadow: hoff voff blur #000; }
+    main:after {font-family: 'Playball', cursive; position: absolute; bottom: -90px; left: 50%; color: rgba(0, 0, 0, 0.02); font-size: 150px; line-height: 140px; white-space: nowrap; text-transform: lowercase; transform: translateX(-50%); pointer-events: none; z-index: -1; }
+    .srch_wrpr {width: 400px; max-width: 400px; height: 70px; position: relative; z-index: 1; }
+    .srch_sb_cnt {width: 70px; height: 70px; background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); background-color: transparent; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); overflow: hidden; transition: all 0.4s ease-in-out 0s; z-index: 0; border-radius: 5px; }
+    .sech_txt_inpt {opacity: 0; height: 50px; left: 10px; border-radius: 30px; border: 0; width: 92%; padding: 0 60px 0 15px; background-color: transparent; color: #333; font-size: 15px; transition: all 0.4s ease-in-out 0s; }
+    .sech_txt_inpt:focus {letter-spacing: 2px;text-transform: uppercase;}
+    .sech_txt_inpt:focus, .srch_btn:focus {outline: none;}
+    .sech_txt_inpt, .srch_btn {position: absolute; z-index: 1; top: 50%; transform: translateY(-50%); }
+    .srch_btn {width: 70px; text-align: center; height: 70px; right: 0; background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); background-color: transparent; border:0; transition: all 0.4s ease-in-out 0s; font-size: 26px; cursor: pointer; color: #545454; }
+    .srch_btn:after {position: absolute; content: '\f00d'; font-family: fontAwesome; top: 50%; transform: translateY(-50%) rotate(0deg); right: 10px; height: 30px; width: 30px; font-size: 28px; z-index: -1; visibility: hidden;}
+    input.checkbox {position: absolute; z-index: 1; width: 70px; height: 70px; opacity: 0.0; right: 30%; top: 50%; transform: translate(-50%, -50%); transition: all 0.4s ease-in-out 0s; cursor: pointer; }
+    input.checkbox:checked { width: 30px; height: 30px; right: -14%; transform: translate(-50%, -60%);}
+    input.checkbox:checked ~ .srch_sb_cnt {width: 100%; border-radius: 40px;background-color: #333; overflow: visible;}
+    input.checkbox:checked ~ .srch_sb_cnt .srch_btn { width: 50px; height: 50px; right: 10px; border-radius: 100%; font-size: 20px; background-image: linear-gradient(to top, #7308ff 0%, #b899ff 100%); color: #fff;text-shadow: 1px 1px 2px rgba(0,0,0,0.2);}
+    input.checkbox:checked ~ .srch_sb_cnt .sech_txt_inpt { opacity: 1; }
+    input.checkbox:checked ~ .srch_sb_cnt .srch_btn:after {transform: translateY(-50%) rotate(90deg); right: -50px; visibility: visible; transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570); transition-delay: 0.5s; color: white; }
+
+
+    #section{
+        margin-top:260px ;
+        color: whitesmoke;
+    }
+    h1{
+        text-transform:uppercase;
+        font-size:4vw ;
+        color: #FFFFFF;
+        text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+        color: #FFFFFF;
+    }
+    img{
+        height: 500px;
+        width: 600px;
+    }
+    iframe{
+        margin-top:2vw ;
+        height: 500px;
+        width: 100%;
+    }
+    button{
+        height:fit-content ;
+        width:fit-content;
+        padding:0 6px ;
+        font-family:sans-serif;
+        color: whitesmoke;
+        border:1px solid rgb(136, 0, 136) ;
+        background-color:grey;
+        border-radius:6px;
+        font-size: 25px;
+        text-align: left;
+    }
+
+    @media (max-width:1199px){
+        img{
+            height: 30vw;
+            width: 45vw;
+        }
+    }
+    @media (max-width:765px){
+        img{
+            height: 35vw;
+            width: 100%;
+        }
+        #ingd-btn{
+            margin-top: 5vw;
+        }
+        main:before {
+            font-size:1rem ;
+        }
+        .sech_txt_inpt{
+            width:20vw;
+        }
+        h1{
+            font-size:5vw ;
+        }
+    }
